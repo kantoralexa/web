@@ -1,0 +1,9 @@
+nav a{
+    text-decoration: none;
+    color: blueviolet;
+}
+
+nav a:hover{
+    color: purple;
+    font-weight: bold;
+}
