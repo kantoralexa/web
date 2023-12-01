@@ -1,9 +1,9 @@
-nav a{
+nav a {
     text-decoration: none;
     color: slateblue;
 }
 
-nav a:hover{
+nav a:hover {
     color: indigo;
     background-color: lavender;
     font-weight: bold;
