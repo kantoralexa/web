@@ -1,9 +1,9 @@
 nav a{
     text-decoration: none;
-    color: blueviolet;
+    color: slateblue;
 }
 
 nav a:hover{
-    color: purple;
+    color: indigo;
     font-weight: bold;
 }
