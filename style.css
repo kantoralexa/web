@@ -1,9 +1,9 @@
 nav{
     text-decoration: none;
-    color: slateblue;
+    color: pink;
 }
 nav a:hover{
-    color: indigo;
+    color: deeppink;
     background-color: pink;
     font-weight: bold;
 }
