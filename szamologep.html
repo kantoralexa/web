@@ -1,65 +1,86 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="hu">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Számológép</title>
-    <style>
-        input, button {
-            margin: 5px;
-        }
-    </style>
+    <title>Javascript</title>
 </head>
 <body>
-
-    <input type="text" id="display" disabled>
-
     <div>
-        <button onclick="appendToDisplay('7')">7</button>
-        <button onclick="appendToDisplay('8')">8</button>
-        <button onclick="appendToDisplay('9')">9</button>
-        <button onclick="appendToDisplay('/')">/</button>
-    </div>
-
-    <div>
-        <button onclick="appendToDisplay('4')">4</button>
-        <button onclick="appendToDisplay('5')">5</button>
-        <button onclick="appendToDisplay('6')">6</button>
-        <button onclick="appendToDisplay('*')">*</button>
-    </div>
-
-    <div>
-        <button onclick="appendToDisplay('1')">1</button>
-        <button onclick="appendToDisplay('2')">2</button>
-        <button onclick="appendToDisplay('3')">3</button>
-        <button onclick="appendToDisplay('-')">-</button>
-    </div>
-    <div>   
-        <button onclick="appendToDisplay('0')">0</button>
-        <button onclick="appendToDisplay('.')">.</button>
-        <button onclick="calculateResult()">=</button>
-        <button onclick="appendToDisplay('+')">+</button>
-    </div>
-
-    <script>
-        function appendToDisplay(value) {
-            document.getElementById('display').value += value;
-        }
-
-        function clearDisplay() {
-            document.getElementById('display').value = '';
-        }
-
-        function calculateResult() {
-            try {
-                var expression = document.getElementById('display').value;
-                var result = Function('"use strict";return (' + expression + ')')();
-                document.getElementById('display').value = result;
-            } catch (error) {
-                document.getElementById('display').value = 'Error';
+        <input type="button" value="összead" onclick="összead()">
+        <script>
+          function összead(){
+            let szam1, szam2, eredmeny;
+            szam1 = Number (prompt("egyik szám?"));
+            while (Number.isNaN(szam1)){
+                szam1 = Number (prompt("SZÁMOT ÍRJ MÁR BE!"));
             }
-        }
-    </script>
-
+            szam2 = Number (prompt("másik szám?"));
+            while (Number.isNaN(szam2)){
+                szam2 = Number (prompt("SZÁMOT ÍRJ MÁR BE!"));
+            }
+        
+            eredmeny= szam1 + szam2;
+            alert("két szám összege: " + eredmeny)
+          }
+        </script>
+    </div>
+    <div>
+        <input type="button" value="összeszoroz" onclick="összeszoroz()">
+          <script>
+            function összeszoroz(){
+              let szam1, szam2, eredmeny;
+              szam1 = Number (prompt("egyik szám?"));
+              while (Number.isNaN(szam1)){
+                  szam1 = Number (prompt("SZÁMOT ÍRJ MÁR BE!"));
+              }
+              szam2 = Number (prompt("másik szám?"));
+              while (Number.isNaN(szam2)){
+                  szam2 = Number (prompt("SZÁMOT ÍRJ MÁR BE!"));
+              }
+        
+              eredmeny= szam1 * szam2;
+              alert("két szám szorzata: " + eredmeny)
+            }
+          </script>
+    </div>
+      <div>
+          <input type="button" value="osztás" onclick="osztás()">
+          <script>
+            function osztás(){
+              let szam1, szam2, eredmeny;
+              szam1 = Number (prompt("egyik szám?"));
+              while (Number.isNaN(szam1)){
+                  szam1 = Number (prompt("SZÁMOT ÍRJ MÁR BE!"));
+              }
+              szam2 = Number (prompt("másik szám?"));
+              while (Number.isNaN(szam2)){
+                  szam2 = Number (prompt("SZÁMOT ÍRJ MÁR BE!"));
+              }
+          
+              eredmeny= szam1 / szam2;
+              alert("két szám hányadosa: " + eredmeny)
+            }
+            </script>
+      </div>
+            <div>
+                <input type="button" value="kivonás" onclick="kivonás()">
+                <script>
+                  function kivonás(){
+                    let szam1, szam2, eredmeny;
+                    szam1 = Number (prompt("egyik szám?"));
+                    while (Number.isNaN(szam1)){
+                        szam1 = Number (prompt("SZÁMOT ÍRJ MÁR BE!"));
+                    }
+                    szam2 = Number (prompt("másik szám?"));
+                    while (Number.isNaN(szam2)){
+                        szam2 = Number (prompt("SZÁMOT ÍRJ MÁR BE!"));
+                    }
+                
+                    eredmeny= szam1 - szam2;
+                    alert("két szám külömbsége: " + eredmeny)
+                  }
+                          </script>
+            </div>
 </body>
 </html>
