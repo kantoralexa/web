@@ -3,8 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Javascript</title>
+    <title>Számológép</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+      div{
+        border: 1px solid white;
+        background-color: pink;
+        margin: auto;
+      }
+    </style>
 </head>
 <body>
     <nav>
@@ -16,27 +23,32 @@
         <a href="evszakok.html">ÉVSZAKOK</a> |
         <a href="szamologep.html">SZÁMOLÓGÉP</a> |
     </nav>
-            <input type="button" value="összead" onclick="összead()">
-            <script>
-              function összead(){
-                let szam1, szam2, eredmeny;
-                szam1 = Number (prompt("egyik szám?"));
-                while (Number.isNaN(szam1)){
-                    szam1 = Number (prompt("SZÁMOT ÍRJ MÁR BE!"));
-                }
-                szam2 = Number (prompt("másik szám?"));
-                while (Number.isNaN(szam2)){
-                    szam2 = Number (prompt("SZÁMOT ÍRJ MÁR BE!"));
-                }
+    <div>
+      <input type="button" value="összead" onclick="katt1()">
+      <input type="button" value="kivonás" onclick="katt2()">
+      <input type="button" value="összeszoroz" onclick="katt3()">
+      <input type="button" value="osztás" onclick="katt4()">
+    </div>
             
-                eredmeny= szam1 + szam2;
-                alert("két szám összege: " + eredmeny)
-              }
+            <script>
+                  function katt1(){
+                    let szam1, szam2, eredmeny;
+                    szam1 = Number (prompt("egyik szám?"));
+                    while (Number.isNaN(szam1)){
+                        szam1 = Number (prompt("SZÁMOT ÍRJ MÁR BE!"));
+                    }
+                    szam2 = Number (prompt("másik szám?"));
+                    while (Number.isNaN(szam2)){
+                        szam2 = Number (prompt("SZÁMOT ÍRJ MÁR BE!"));
+                    }
+                
+                    eredmeny= szam1 + szam2;
+                    alert("két szám összege: " + eredmeny)
+                  }
             </script>
-                <br>
-            <input type="button" value="összeszoroz" onclick="összeszoroz()">
+            
               <script>
-                function összeszoroz(){
+                function katt3(){
                   let szam1, szam2, eredmeny;
                   szam1 = Number (prompt("egyik szám?"));
                   while (Number.isNaN(szam1)){
@@ -51,11 +63,9 @@
                   alert("két szám szorzata: " + eredmeny)
                 }
               </script>
-            
-                <br>
-              <input type="button" value="osztás" onclick="osztás()">
+             
               <script>
-                function osztás(){
+                function katt4(){
                   let szam1, szam2, eredmeny;
                   szam1 = Number (prompt("egyik szám?"));
                   while (Number.isNaN(szam1)){
@@ -70,11 +80,9 @@
                   alert("két szám hányadosa: " + eredmeny)
                 }
                 </script>
-            
-                  <br>
-                    <input type="button" value="kivonás" onclick="kivonás()">
-                    <script>
-                      function kivonás(){
+
+                <script>
+                      function katt2(){
                         let szam1, szam2, eredmeny;
                         szam1 = Number (prompt("egyik szám?"));
                         while (Number.isNaN(szam1)){
