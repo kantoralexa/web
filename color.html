@@ -22,12 +22,13 @@
         <a href="szamologep.html">SZÁMOLÓGÉP</a> |
         <a href="color.html">SZÍNVÁLASZTÓ</a> |
     </nav>
-
-    <h1>Háttérszín</h1>
-    <input type="color" name="szin" id="szin" onchange="colorChange()" style="display: block; margin: auto;">
+    
+    <h1 id="text">Szövegszín választás</h1>
+    <input type="color" oninput="changeColor(event)" style="display: block; margin: auto;">
     <script>
-        function colorChange() {
-            document.body.style.backgroundColor = szin.value            
+        var text=document.getElementById("text");
+        function changeColor(event){
+            text.style.color=event.target.value;
         }
     </script>
 </body>
