@@ -4,8 +4,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Színezés JavaScript-el</title>
+    <style>
+        h1{
+            text-align: center;
+        }
+    </style>
 </head>
 <body>
     
+    <nav>
+        <a href="index.html">FŐOLDAL</a> |
+        <a href="tablazat.html">TÁBLÁZAT</a> |
+        <a href="lista.html">LISTÁK</a> |
+        <a href="keplink.html">KÉPLINK FELADAT</a> |
+        <a href="urlap.html">ŰRLAP</a> |
+        <a href="evszakok.html">ÉVSZAKOK</a> |
+        <a href="szamologep.html">SZÁMOLÓGÉP</a> |
+        <a href="color.html">SZÍNVÁLASZTÓ</a> |
+    </nav>
+
+    <h1>Háttérszín</h1>
+    <input type="color" name="szin" id="szin" onchange="colorChange()" style="display: block; margin: auto;">
+    <script>
+        function colorChange() {
+            document.body.style.backgroundColor = szin.value            
+        }
+    </script>
 </body>
 </html>
