@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Képcsere</title>
+</head>
+<body>
+    <img src="ceca.webp" alt="cica" id="cica" onclick="cica()" width="20%">
+    <img src="röfi.jpg" alt="malac" id="malac" onclick="rofi()" width="20%">
+
+    <script>
+        function cica(){
+        document.getElementById("cica").style.display = "none" 
+        document.getElementById("malac").style.display= "block"   
+        }
+        function rofi(){
+            document.getElementById("malac").style.display = "none"
+            document.getElementById("cica").style.display = "block"
+        }
+    </script>
+    
+
+    
+
+</body>
+</html>
